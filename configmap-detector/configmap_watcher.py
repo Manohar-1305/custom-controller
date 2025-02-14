@@ -36,7 +36,7 @@ def watch_configmap_changes():
         # Check if a CRD instance is watching this ConfigMap
         try:
             cr_list = crd_api.list_namespaced_custom_object(
-                group="configmapwatchers.example.com", version="v1", namespace=NAMESPACE, plural="configmapwatchers"
+                group="configmapwatchers.io", version="v1", namespace=NAMESPACE, plural="configmapwatchers"
             )
             for cr in cr_list.get("items", []):
                 if cr["spec"]["configMapName"] == cm_name:
