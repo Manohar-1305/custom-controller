@@ -1,0 +1,7 @@
+apiVersion: configmapwatchers.io
+kind: ConfigMapWatcher
+metadata:
+  name: test-watcher
+spec:
+  configMapName: test-config
+  deploymentName: test-deployment

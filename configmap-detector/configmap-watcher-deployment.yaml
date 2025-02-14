@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: configmap-watcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: configmap-watcher
+  template:
+    metadata:
+      labels:
+        app: configmap-watcher
+    spec:
+      serviceAccountName: configmap-watcher-sa # ✅ USE THE SERVICEACCOUNT
+      containers:
+        - name: watcher
+          image: manoharshetty507/configmap-watcher:v1

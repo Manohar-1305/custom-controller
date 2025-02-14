@@ -1,0 +1,9 @@
+docker build -t manoharshetty507/configmap-watcher:latest .
+docker tag manoharshetty507/configmap-watcher:v1 manoharshetty507/configmap-watcher:v1
+docker push manoharshetty507/configmap-watcher:v1
+
+curl http://localhost:8080
+kubectl edit configmap test-config
+
+modify the line in configmap
+return 200 "New Config Loaded!\n";
