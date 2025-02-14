@@ -1,5 +1,5 @@
 sudo chmod 666 /var/run/docker.sock
-docker build -t manoharshetty507/configmap-watcher:latest .
+docker build -t manoharshetty507/configmap-watcher:v1 .
 docker tag manoharshetty507/configmap-watcher:v1 manoharshetty507/configmap-watcher:v1
 docker push manoharshetty507/configmap-watcher:v1
 
