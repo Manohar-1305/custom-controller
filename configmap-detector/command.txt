@@ -8,3 +8,5 @@ kubectl edit configmap test-config
 
 modify the line in configmap
 return 200 "New Config Loaded!\n";
+kubectl get crds | grep configmapwatchers
+kubectl api-resources | grep configmapwatchers
